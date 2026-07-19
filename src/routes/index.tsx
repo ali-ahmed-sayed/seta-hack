@@ -600,8 +600,8 @@ function Partners() {
         ))}
       </motion.div>
       <motion.div variants={fadeUp} className="mt-16 text-center">
-        <span className="chip">{hostedBy}</span>
-        <div className="glass mt-6 inline-flex items-center gap-3 rounded-2xl px-6 py-4">
+        <span className="chip block mx-auto w-35">{hostedBy}</span>
+        <div className="glass mt-4 mx-auto flex items-center gap-3 rounded-2xl px-6 py-4 w-100">
           <CicLogo />
         </div>
       </motion.div>
