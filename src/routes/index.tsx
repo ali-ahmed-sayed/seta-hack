@@ -346,9 +346,9 @@ function Tracks() {
   return (
     <Section id="tracks" className="mx-auto max-w-7xl px-4 py-24">
       <SectionLabel><Trophy className="h-3.5 w-3.5" /> {chip}</SectionLabel>
-      <motion.h2 variants={fadeUp} className="mt-6 text-center text-3xl font-semibold sm:text-5xl">
+      {/* <motion.h2 variants={fadeUp} className="mt-6 text-center text-3xl font-semibold sm:text-5xl">
         {pre} <span className="text-gradient">{brand}</span>
-      </motion.h2>
+      </motion.h2> */}
       <motion.div variants={stagger} className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {TRACK_COLUMNS.map((col) => (
           <motion.div key={col.name} variants={fadeUp} className="flex flex-col gap-5">
