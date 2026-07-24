@@ -459,16 +459,16 @@ function InnovationChallenge() {
 
             <div className="flex justify-start">
               <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
-                Explore Innovation Challenge <ArrowRight className="h-4 w-4" />
+                Apply now <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[30rem]">
+          <div className="relative mx-auto w-full max-w-full sm:max-w-[30rem]">
             <div className="glass group relative overflow-hidden rounded-[2rem] border border-border/10 bg-[#07111f]/90 p-8 shadow-[0_30px_90px_-40px_rgba(32,210,255,0.28)] transition-all duration-300 hover:-translate-y-1">
               <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.16),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.14),transparent_28%)]" />
               <div className="relative flex justify-center py-6">
-                <div className="relative h-[320px] w-[320px] sm:h-[340px] sm:w-[340px]">
+                <div className="relative w-full max-w-[320px] aspect-square sm:max-w-[340px]">
                   <div className="absolute inset-0 rounded-full border border-cyan/10" />
                   <div className="absolute inset-8 rounded-full border border-violet/10" />
                   <div className="absolute inset-16 rounded-full border border-cyan/10" />
