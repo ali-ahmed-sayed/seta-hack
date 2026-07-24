@@ -113,6 +113,9 @@ function Hero() {
         <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-foreground/70 sm:text-base">
           {subtitle}
         </p>
+        <p className="mx-auto mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-cyan/90">
+          13 — 15 Aug
+        </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
@@ -604,6 +607,9 @@ function Partners() {
         <div className="glass mt-4 mx-auto flex items-center gap-3 rounded-2xl px-6 py-4 w-100">
           <CicLogo />
         </div>
+        <p className="mx-auto mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-cyan/90">
+          13 — 15 Aug
+        </p>
       </motion.div>
     </Section>
   );
@@ -752,7 +758,7 @@ function HomePage() {
           <About />
           <Domains />
           <Journey />
-          <ChallengesPlaceholder />
+          <Tracks  />
           <GalleryPreview />
           <Partners />
           <FAQ />
