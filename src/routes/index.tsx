@@ -758,7 +758,7 @@ function HomePage() {
           <About />
           <Domains />
           <Journey />
-          <Tracks  />
+          <ChallengesPlaceholder   />
           <GalleryPreview />
           <Partners />
           <FAQ />
