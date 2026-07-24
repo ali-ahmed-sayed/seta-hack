@@ -16,10 +16,12 @@ import {
   Instagram,
   Linkedin,
   Sparkles,
+  Check,
 } from "lucide-react";
 
 import { fetchCollections, fetchItems, refreshSignedUrl, type Collection } from "@/lib/gallery";
 import { SiteHeader, Logo, CicLogo } from "@/components/SiteHeader";
+import setaMark from "@/assets/seta-mark.png.asset.json";
 import { useText, useLines } from "@/lib/site-content";
 
 export const Route = createFileRoute("/")({
@@ -377,6 +379,134 @@ function Tracks() {
             })}
           </motion.div>
         ))}
+      </motion.div>
+    </Section>
+  );
+}
+
+function InnovationChallenge() {
+  const requirements = [
+    "Define your own real-world problem.",
+    "Develop an innovative solution.",
+    "Integrate at least TWO of our core domains.",
+  ];
+  const domains = [
+    { icon: "🌌", label: "Astronomy", accent: "bg-cyan/10 text-cyan" },
+    { icon: "⚡", label: "Energy", accent: "bg-amber-400/10 text-amber-300" },
+    { icon: "🌱", label: "Sustainability", accent: "bg-emerald-400/10 text-emerald-300" },
+    { icon: "💻", label: "Technology", accent: "bg-violet-400/10 text-violet-300" },
+  ];
+
+  return (
+    <Section id="innovation" className="mx-auto max-w-7xl px-4 py-24">
+      <motion.div variants={fadeUp} className="glass-strong relative overflow-hidden rounded-[2rem] p-8 sm:p-12">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-12 top-8 h-52 w-52 rounded-full opacity-40 blur-3xl"
+          style={{ background: "oklch(0.55 0.18 240 / 0.28)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-12 bottom-10 h-64 w-64 rounded-full opacity-30 blur-3xl"
+          style={{ background: "oklch(0.7 0.16 90 / 0.22)" }}
+        />
+
+        <div className="relative grid gap-10 xl:grid-cols-[1.05fr_0.95fr] items-start">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan shadow-sm shadow-cyan/10">
+              <span className="inline-flex h-2.5 w-2.5 rounded-full bg-cyan" />
+              Special Challenge
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+                Innovation Challenge
+              </h2>
+              <p className="text-xl font-semibold text-cyan/90">Beyond Boundaries</p>
+            </div>
+
+            <p className="max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
+              Have an idea that doesn’t fit a single challenge? Create your own challenge and build an innovative solution that combines at least two SETA HACK core domains.
+            </p>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {domains.map((domain) => (
+                <div
+                  key={domain.label}
+                  className="glass group rounded-2xl border border-border/15 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan/40"
+                >
+                  <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-3xl ${domain.accent} shadow-[0_20px_60px_-40px_rgba(32,210,255,0.3)]`}>
+                    <span className="text-2xl">{domain.icon}</span>
+                  </div>
+                  <p className="mt-3 text-sm font-semibold">{domain.label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-[2rem] border border-cyan/15 bg-background/70 p-6 shadow-[0_30px_55px_-35px_rgba(32,210,255,0.18)] backdrop-blur-xl">
+              <p className="text-sm uppercase tracking-[0.22em] text-cyan/80">Requirements</p>
+              <div className="mt-5 space-y-4">
+                {requirements.map((item) => (
+                  <div key={item} className="flex gap-3 text-sm leading-relaxed text-foreground/80">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-cyan/10 text-cyan">
+                      <Check className="h-4 w-4" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-start">
+              <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
+                Explore Innovation Challenge <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-[30rem]">
+            <div className="glass group relative overflow-hidden rounded-[2rem] border border-border/10 bg-[#07111f]/90 p-8 shadow-[0_30px_90px_-40px_rgba(32,210,255,0.28)] transition-all duration-300 hover:-translate-y-1">
+              <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.16),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.14),transparent_28%)]" />
+              <div className="relative flex justify-center py-6">
+                <div className="relative h-[320px] w-[320px] sm:h-[340px] sm:w-[340px]">
+                  <div className="absolute inset-0 rounded-full border border-cyan/10" />
+                  <div className="absolute inset-8 rounded-full border border-violet/10" />
+                  <div className="absolute inset-16 rounded-full border border-cyan/10" />
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-24 w-24 items-center justify-center rounded-full border border-cyan/20 bg-background/95 shadow-[0_0_0_10px_rgba(15,23,42,0.32)]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan/10">
+                      <img src={setaMark.url} alt="SETA mark" className="h-10 w-10 object-contain" />
+                    </div>
+                  </div>
+
+                  <div className="absolute left-1/2 top-2 -translate-x-1/2">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-cyan/15 bg-cyan/10 text-2xl text-cyan shadow-[0_20px_60px_-40px_rgba(32,210,255,0.35)]">
+                      🌌
+                    </div>
+                  </div>
+                  <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-amber-400/15 bg-amber-400/10 text-2xl text-amber-300 shadow-[0_20px_60px_-40px_rgba(251,191,36,0.3)]">
+                      ⚡
+                    </div>
+                  </div>
+                  <div className="absolute left-2 top-1/2 -translate-y-1/2">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-emerald-400/15 bg-emerald-400/10 text-2xl text-emerald-300 shadow-[0_20px_60px_-40px_rgba(52,211,153,0.3)]">
+                      🌱
+                    </div>
+                  </div>
+                  <div className="absolute left-1/2 bottom-2 -translate-x-1/2">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-violet-400/15 bg-violet-400/10 text-2xl text-violet-300 shadow-[0_20px_60px_-40px_rgba(168,85,247,0.3)]">
+                      💻
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <blockquote className="relative z-10 mt-6 text-center text-sm italic leading-relaxed text-muted-foreground">
+                “The greatest innovations happen where disciplines meet.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </Section>
   );
@@ -759,7 +889,8 @@ function HomePage() {
           <Domains />
           <Journey />
           
-          <Tracks  />
+          <Tracks />
+          <InnovationChallenge />
           <GalleryPreview />
           <Partners />
           <FAQ />
